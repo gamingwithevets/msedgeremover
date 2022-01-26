@@ -27,4 +27,5 @@ Modifies registry values to enable or disable Microsoft Edge reinstalling after 
 - English (EN)
 - German/Deutsch (DE)
 - Vietnamese/Tiếng Việt (VI)
+
 You can contribute, too! Just email me at `thenewgwe@gmail.com` and give your translations. I'll look at it and add it in the script.
