@@ -13,7 +13,7 @@ NOTE: All parameters must be **lowercase**. The program **does not** have suppor
 | `/?` | Displays help information about the program. |
 | `/debug` | Enables Debug Mode. It's kind of useless. |
 | `/echoon` | Turns command-echoing on. Used for diagnostics. |
-| `/langXX` | Starts the program with the specified language in XX. XX can be the ISO 2 letter language code of a supported language (see Localization). |
+| `/langXX` | Starts the program with the specified language in `XX`. `XX` can be the ISO 2 letter language code of a supported language (see Localization). |
 
 # Features
 ## Remove New Microsoft Edge
