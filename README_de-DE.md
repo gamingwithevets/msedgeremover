@@ -13,7 +13,7 @@ HINWEIS: Alle Parameter müssen **Kleinbuchstaben** sein. Das Programm **unterst
 | `/?` | Zeigt Hilfeinformationen zum Programm an. |
 | `/debug` | Aktiviert den Debug-Modus. Es ist irgendwie nutzlos. |
 | `/echoon` | Schaltet die Befehlsechofunktion ein. Wird für die Diagnose verwendet. |
-| `/langXX` | Startet das Programm mit der angegebenen Sprache in `XX`. `XX` kann der aus zwei Buchstaben bestehende ISO-Sprachcode einer unterstützten Sprache sein (siehe Lokalisierung). |
+| `/langXX` | Startet das Programm mit der angegebenen Sprache in `XX`. `XX` kann der aus zwei Buchstaben bestehende ISO-Sprachcode einer unterstützten Sprache sein (siehe [Lokalisierung](https://github.com/gamingwithevets/msedgeremover/blob/main/README_de-DE.md#lokalisierung)). |
 
 # Merkmale
 ## Neuen Microsoft Edge entfernen
