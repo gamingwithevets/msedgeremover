@@ -28,6 +28,6 @@ Entfernt den Chromium-basierten Microsoft Edge von Ihrem Computer. Sie können d
 - Englisch/English (EN)
 - Vietnamesisch/Tiếng Việt (VI)
 
-Auch Sie können etwas beitragen! Senden Sie mir einfach eine E-Mail an [`thenewgwe@gmail.com`](mailto:thenewgwe@gmail.com) und übermitteln Sie Ihre Übersetzungen. Ich schaue es mir an und füge es in das Skript ein.
-Sie können mir auch Übersetzungen dieser README-Datei zusenden! Nochmals, wenn ich damit zufrieden bin, werde ich eine offizielle Übersetzung daraus machen.
+Auch Sie können etwas beitragen! Senden Sie mir einfach eine E-Mail an [`thenewgwe@gmail.com`](mailto:thenewgwe@gmail.com) und übermitteln Sie Ihre Übersetzungen. Ich schaue es mir an und füge es in das Skript ein.  
+Sie können mir auch Übersetzungen dieser README-Datei zusenden! Nochmals, wenn ich damit zufrieden bin, werde ich eine offizielle Übersetzung daraus machen.  
 Sie können mir auch *überarbeitete* Übersetzungen schicken, wenn Sie mit den aktuellen nicht zufrieden sind! Ich habe gerade den englischen Text durch [Google Translate](https://translate.google.com) geschickt und ihn für die nicht-englischen Sprachen ein wenig überarbeitet, also hätte ich wirklich gerne die bestmöglichen Übersetzungen.
