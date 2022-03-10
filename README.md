@@ -29,7 +29,7 @@ Modifies registry values to enable or disable Microsoft Edge reinstalling after 
 
 # Localization
 **GWE's Microsoft Edge and Search Box Suggestions Remover** currently has support for these languages:
-| Language | Region | ISO 2 Code | BCP 47 Code |
+| Language | Country | ISO 2 Code | BCP 47 Code |
 |--|--|--|--|
 | English (Default) | United States | EN | en-US |
 - German/Deutsch | Germany/Deutschland | DE | de-DE |
