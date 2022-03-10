@@ -1,6 +1,6 @@
 **Phần mềm Gỡ bỏ Microsoft Edge và đề xuất Hộp tìm kiếm của GWE** là một công cụ dễ dàng để xóa Microsoft Edge dựa trên Chromium của Microsoft, cũng như bật / tắt một số tùy chọn liên quan đến Edge.
 
-Tệp README có các thứ tiếng: [English (US)](https://github.com/gamingwithevets/msedgeremover/blob/main/README.md)&nbsp; [Deutsch (Deutschland)](https://github.com/gamingwithevets/msedgeremover/blob/main/README_de-DE.md)
+Tệp README có các thứ tiếng: [English (US)](https://github.com/gamingwithevets/msedgeremover/blob/main/README.md)&nbsp; [Deutsch (Deutschland)](https://github.com/gamingwithevets/msedgeremover/blob/main/README/README_de-DE.md)
 
 # Cú pháp
 ## v1.1.0+
