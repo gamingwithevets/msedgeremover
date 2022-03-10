@@ -29,7 +29,7 @@ Entfernt den Chromium-basierten Microsoft Edge von Ihrem Computer. Sie können d
 
 # Lokalisierung
 **Microsoft Edge und Suchfeld-Vorschläge-Entferner von GWE** unterstützt derzeit die folgenden Sprachen:
-| Sprache | Region | ISO-2-Code | BCP-47-Code |
+| Sprache | Land | ISO-2-Code | BCP-47-Code |
 |--|--|--|--|
 | Englisch/English (Standard) | Vereinigte Staaten/United States | EN | en-US |
 | Deutsch | Deutschland | DE | de-DE |
