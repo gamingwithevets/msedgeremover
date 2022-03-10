@@ -32,8 +32,8 @@ Entfernt den Chromium-basierten Microsoft Edge von Ihrem Computer. Sie können d
 | Sprache | Region | ISO-2-Code | BCP-47-Code |
 |--|--|--|--|
 | Englisch/English (Standard) | Vereinigte Staaten/United States | EN | en-US |
-- Deutsch | Deutschland | DE | de-DE |
-- Vietnamesisch/Tiếng Việt | Vietnam/Việt Nam | VI | vi-VN |
+| Deutsch | Deutschland | DE | de-DE |
+| Vietnamesisch/Tiếng Việt | Vietnam/Việt Nam | VI | vi-VN |
 
 Auch Sie können etwas beitragen! Senden Sie mir einfach eine E-Mail an [`thenewgwe@gmail.com`](mailto:thenewgwe@gmail.com) und übermitteln Sie Ihre Übersetzungen. Ich schaue es mir an und füge es in das Skript ein.  
 Sie können mir auch Übersetzungen dieser README-Datei zusenden! Nochmals, wenn ich damit zufrieden bin, werde ich eine offizielle Übersetzung daraus machen.  
