@@ -32,8 +32,8 @@ Modifies registry values to enable or disable Microsoft Edge reinstalling after 
 | Language | Country | ISO 2 Code | BCP 47 Code |
 |--|--|--|--|
 | English (Default) | United States | EN | en-US |
-- German/Deutsch | Germany/Deutschland | DE | de-DE |
-- Vietnamese/Tiếng Việt | Vietnam/Việt Nam | VI | vi-VN |
+| German/Deutsch | Germany/Deutschland | DE | de-DE |
+| Vietnamese/Tiếng Việt | Vietnam/Việt Nam | VI | vi-VN |
 
 You can contribute, too! Just email me at [`thenewgwe@gmail.com`](mailto:thenewgwe@gmail.com) and give your translations. I'll look at it and add it in the script.  
 You can also send me translations of this README file! Again, if I'm happy with it, I'll make it an official translation.  
