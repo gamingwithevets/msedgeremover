@@ -3,17 +3,22 @@
 README.md offered in: [Deutsch (Deutschland)](https://github.com/gamingwithevets/msedgeremover/blob/main/README_de-DE.md)
 
 # Syntax
+## v1.1.0+
+```
+msedgeremover [/?] [/debug] [/echoon] [/langXXXX]
+```
+## v1.0.0
 ```
 msedgeremover [/?] [/debug] [/echoon] [/langXX]
 ```
 ## Parameters
-NOTE: All parameters must be **lowercase**. The program **does not** have support for uppercase parameters.
+NOTE: v1.0.0 does not have support for lowercase parameters (except `/debug`).
 | Parameter | Description |
 |--|--|
-| `/?` | Displays help information about the program. |
+| `/?` | Displays help. |
 | `/debug` | Enables Debug Mode. It's kind of useless. |
 | `/echoon` | Turns command-echoing on. Used for diagnostics. |
-| `/langXX` | Starts the program with the specified language in `XX`. `XX` can be the ISO 2 letter language code of a supported language (see [Localization](https://github.com/gamingwithevets/msedgeremover#localization)). |
+| `/langXXXX`<br/>(v1.0.0: `/langXX`) | v1.0.0: Starts the program with the specified language in `XX`. `XX` can be the ISO 2 letter language code of a supported language. <br/>v1.1.0+: Starts the program with the specified language in `XX`. `XX` can be the BCP 47 language code of a supported language (without the dash in between).<br/>See [Localization](https://github.com/gamingwithevets/msedgeremover#localization) for the language codes. |
 
 # Features
 ## Remove New Microsoft Edge
@@ -23,10 +28,12 @@ Removes the Chromium-based Microsoft Edge from your computer. You can type the v
 Modifies registry values to enable or disable Microsoft Edge reinstalling after an update, or to enable or disable the Bing suggestions while you're searching with Windows' Search tool.
 
 # Localization
-**GWE's Microsoft Edge and Search Box Suggestions Remover** currently has support for 3 languages:
-- English (EN)
-- German/Deutsch (DE)
-- Vietnamese/Tiếng Việt (VI)
+**GWE's Microsoft Edge and Search Box Suggestions Remover** currently has support for these languages:
+| Language | Region | ISO 2 Code | BCP 47 Code |
+|--|--|--|--|
+| English (Default) | United States | EN | en-US |
+- German/Deutsch | Germany/Deutschland | DE | de-DE |
+- Vietnamese/Tiếng Việt | Vietnam/Việt Nam | VI | vi-VN |
 
 You can contribute, too! Just email me at [`thenewgwe@gmail.com`](mailto:thenewgwe@gmail.com) and give your translations. I'll look at it and add it in the script.  
 You can also send me translations of this README file! Again, if I'm happy with it, I'll make it an official translation.  
