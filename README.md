@@ -18,7 +18,7 @@ NOTE: v1.0.0 does not have support for lowercase parameters (except `/debug`).
 | `/?` | Displays help. |
 | `/debug` | Enables Debug Mode. It's kind of useless. |
 | `/echoon` | Turns command-echoing on. Used for diagnostics. |
-| `/langXXXX`<br/>(v1.0.0: `/langXX`) | v1.0.0: Starts the program with the specified language in `XX`. `XX` can be the ISO 2 letter language code of a supported language. <br/>v1.1.0+: Starts the program with the specified language in `XX`. `XX` can be the BCP 47 language code of a supported language (without the dash in between).<br/>See [Localization](https://github.com/gamingwithevets/msedgeremover#localization) for the language codes. |
+| `/langXXXX`<br/>(v1.0.0: `/langXX`) | v1.0.0: Starts the program with the specified language in `XX`. `XX` can be the ISO 2 letter language code of a supported language. <br/>v1.1.0+: Starts the program with the specified language in `XXXX`. `XXXX` can be the BCP 47 language code of a supported language (without the dash in between).<br/>See [Localization](https://github.com/gamingwithevets/msedgeremover#localization) for the language codes. |
 
 # Features
 ## Remove New Microsoft Edge
