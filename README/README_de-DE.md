@@ -18,7 +18,7 @@ HINWEIS: v1.0.0 unterstützt keine Parameter in Kleinbuchstaben (außer `/debug`
 | `/?` | Zeigt Hilfeinformationen zum Programm an. |
 | `/debug` | Aktiviert den Debug-Modus. Es ist irgendwie nutzlos. |
 | `/echoon` | Schaltet die Befehlsechofunktion ein. Wird für die Diagnose verwendet. |
-| `/langXXXX`<br/>(v1.0.0: `/langXX`) | v1.0.0: Startet das Programm mit der angegebenen Sprache in `XX`. `XX` kann der aus zwei Buchstaben bestehende ISO-Sprachcode einer unterstützten Sprache sein.<br/>v1.1.0+: Startet das Programm mit der angegebenen Sprache in `XXXX`. `XXXX` kann der BCP 47-Sprachcode einer unterstützten Sprache sein (ohne Bindestrich dazwischen).<br/>Siehe [Lokalisierung](https://github.com/gamingwithevets/msedgeremover/blob/main/README_de-DE.md#lokalisierung) für die Sprachcodes. |
+| `/langXXXX`<br/>(v1.0.0: `/langXX`) | v1.0.0: Startet das Programm mit der angegebenen Sprache in `XX`. `XX` kann der aus zwei Buchstaben bestehende ISO-Sprachcode einer unterstützten Sprache sein.<br/>v1.1.0+: Startet das Programm mit der angegebenen Sprache in `XXXX`. `XXXX` kann der BCP 47-Sprachcode einer unterstützten Sprache sein (ohne Bindestrich dazwischen).<br/>Siehe [Lokalisierung](https://github.com/gamingwithevets/msedgeremover/blob/main/README/README_de-DE.md#lokalisierung) für die Sprachcodes. |
 
 # Merkmale
 ## Neuen Microsoft Edge entfernen
