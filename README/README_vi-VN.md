@@ -18,7 +18,7 @@ LƯU Ý: v1.0.0 không hỗ trợ các tham số chữ thường (ngoại trừ 
 | `/?` | Hiển thị trợ giúp. |
 | `/debug` | Bật Chế độ gỡ lỗi. Hiện tại nó không giúp ích gì nhiều. |
 | `/echoon` | Bật chế độ vọng lệnh. Được sử dụng để tìm và sửa lỗi. |
-| `/langXXXX`<br/>(v1.0.0: `/langXX`) | v1.0.0: Chạy chương trình với ngôn ngữ được chỉ định trong `XX`. `XX` có thể là mã ngôn ngữ chữ cái ISO 2 của ngôn ngữ được hỗ trợ.<br/>v1.1.0+: Chạy chương trình bằng ngôn ngữ được chỉ định trong `XXXX`. `XXXX` có thể là mã ngôn ngữ BCP 47 của ngôn ngữ được hỗ trợ (không có dấu gạch ngang ở giữa).<br/>Xem phần [Bản địa hóa](https://github.com/gamingwithevets/msedgeremover/blob/main/README_vi-VN.md#b%E1%BA%A3n-%C4%91%E1%BB%8Ba-h%C3%B3a) để biết mã ngôn ngữ. |
+| `/langXXXX`<br/>(v1.0.0: `/langXX`) | v1.0.0: Chạy chương trình với ngôn ngữ được chỉ định trong `XX`. `XX` có thể là mã ngôn ngữ chữ cái ISO 2 của ngôn ngữ được hỗ trợ.<br/>v1.1.0+: Chạy chương trình bằng ngôn ngữ được chỉ định trong `XXXX`. `XXXX` có thể là mã ngôn ngữ BCP 47 của ngôn ngữ được hỗ trợ (không có dấu gạch ngang ở giữa).<br/>Xem phần [Bản địa hóa](https://github.com/gamingwithevets/msedgeremover/blob/main/README/README_vi-VN.md#b%E1%BA%A3n-%C4%91%E1%BB%8Ba-h%C3%B3a) để biết mã ngôn ngữ. |
 
 # Chức năng
 ## Xóa Microsoft Edge Mới
