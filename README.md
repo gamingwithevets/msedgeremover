@@ -1,6 +1,6 @@
 **GWE's Microsoft Edge and Search Box Suggestions Remover** is an easy tool to remove Microsoft's Chromium-based Microsoft Edge, as well as enabling/disabling certain options related to Edge.
 
-README file offered in: [Deutsch (Deutschland)](https://github.com/gamingwithevets/msedgeremover/blob/main/README_de-DE.md)&nbsp; [Tiếng Việt (Việt Nam)](https://github.com/gamingwithevets/msedgeremover/blob/main/README_vi-VN.md)
+README file offered in: [Deutsch (Deutschland)](https://github.com/gamingwithevets/msedgeremover/blob/main/README/README_de-DE.md)&nbsp; [Tiếng Việt (Việt Nam)](https://github.com/gamingwithevets/msedgeremover/blob/main/README/README_vi-VN.md)
 
 # Syntax
 ## v1.1.0+
