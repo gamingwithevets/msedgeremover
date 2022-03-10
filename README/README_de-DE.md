@@ -1,6 +1,6 @@
 **Microsoft Edge und Suchfeld-Vorschläge-Entferner von GWE** ist ein einfaches Tool zum Entfernen von Microsofts Chromium-basiertem Microsoft Edge sowie zum Aktivieren/Deaktivieren bestimmter Optionen im Zusammenhang mit Edge.
 
-README-Datei angeboten auf: [English (US)](https://github.com/gamingwithevets/msedgeremover/blob/main/README.md)&nbsp; [Tiếng Việt (Việt Nam)](https://github.com/gamingwithevets/msedgeremover/blob/main/README_vi-VN.md)
+README-Datei angeboten auf: [English (US)](https://github.com/gamingwithevets/msedgeremover/blob/main/README.md)&nbsp; [Tiếng Việt (Việt Nam)](https://github.com/gamingwithevets/msedgeremover/blob/main/README/README_vi-VN.md)
 
 # Syntax
 ## v1.1.0+
