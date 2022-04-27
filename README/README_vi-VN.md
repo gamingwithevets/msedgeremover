@@ -35,6 +35,6 @@ Sửa đổi các giá trị đăng ký để bật hoặc tắt cài đặt l�
 | Tiếng Đức/Deutsch | Đức/Deutschland | DE | de-DE |
 | Tiếng Việt | Việt Nam | VI | vi-VN |
 
-Bạn cũng có thể đóng góp! Chỉ cần gửi email cho tôi theo địa chỉ [`thenewgwe@gmail.com`](mailto: thenewgwe@gmail.com) và cung cấp bản dịch của bạn. Tôi sẽ xem xét nó và thêm nó vào chương trình.
+Bạn cũng có thể đóng góp! Chỉ cần gửi email cho tôi theo địa chỉ [`thenewgwe@gmail.com`](mailto:thenewgwe@gmail.com) và cung cấp bản dịch của bạn. Tôi sẽ xem xét nó và thêm nó vào chương trình.
 Bạn cũng có thể gửi cho tôi bản dịch của tệp README này! Một lần nữa, nếu tôi hài lòng với nó, tôi sẽ chuyển nó thành bản dịch chính thức.
-Bạn cũng có thể gửi cho tôi bản dịch *đã sửa đổi* nếu bạn không hài lòng với bản dịch hiện tại! Tôi chỉ sao chép chữ tiếng Anh vào [Google Dịch] (https://translate.google.com) và sửa lại một chút cho các ngôn ngữ không phải tiếng Anh, vì vậy tôi rất muốn có những bản dịch tốt nhất có thể.
+Bạn cũng có thể gửi cho tôi bản dịch *đã sửa đổi* nếu bạn không hài lòng với bản dịch hiện tại! Tôi chỉ sao chép chữ tiếng Anh vào [Google Dịch](https://translate.google.com) và sửa lại một chút cho các ngôn ngữ không phải tiếng Anh, vì vậy tôi rất muốn có những bản dịch tốt nhất có thể.
