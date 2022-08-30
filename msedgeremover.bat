@@ -9,107 +9,34 @@ chcp 65001 >nul 2>&1
 set debug=0
 set help=0
 
-set version=1.1.0
+set version=1.1.1
 
-for /f "tokens=3" %%a in ('reg query "HKCU\Control Panel\Desktop" /v PreferredUILanguages ^| find "PreferredUILanguages"') DO set lang=%%a
+if "%lang%" == "" (for /f "tokens=2 delims==" %%a in ('wmic path win32_OperatingSystem get OSLanguage /value') do set lang=%%a)
+
+if "%*" neq "" (goto init_params) else (goto init_lang)
+
+:init_params
+set "params=%*"
 
 :: initialize params
-if "%1" == "/echoon" (echo on)
-if "%2" == "/echoon" (echo on)
-if "%3" == "/echoon" (echo on)
-if "%4" == "/echoon" (echo on)
-if "%5" == "/echoon" (echo on)
-if "%6" == "/echoon" (echo on)
-if "%7" == "/echoon" (echo on)
-if "%8" == "/echoon" (echo on)
-if "%9" == "/echoon" (echo on)
+if "x%params:/echoon=%" neq "x%params%" (echo on)
+if "x%params:/debug=%" neq "x%params%" (set debug=1)
+if "x%params:/?=%" neq "x%params%" (set help=1)
+if "x%params:/langvivn=%" neq "x%params%" (set lang=1066)
+if "x%params:/langdede=%" neq "x%params%" (set lang=1031)
 
-if "%1" == "/ECHOON" (echo on)
-if "%2" == "/ECHOON" (echo on)
-if "%3" == "/ECHOON" (echo on)
-if "%4" == "/ECHOON" (echo on)
-if "%5" == "/ECHOON" (echo on)
-if "%6" == "/ECHOON" (echo on)
-if "%7" == "/ECHOON" (echo on)
-if "%8" == "/ECHOON" (echo on)
-if "%9" == "/ECHOON" (echo on)
-
-if "%1" == "/debug" (set debug=1)
-if "%2" == "/debug" (set debug=1)
-if "%3" == "/debug" (set debug=1)
-if "%4" == "/debug" (set debug=1)
-if "%5" == "/debug" (set debug=1)
-if "%6" == "/debug" (set debug=1)
-if "%7" == "/debug" (set debug=1)
-if "%8" == "/debug" (set debug=1)
-if "%9" == "/debug" (set debug=1)
-
-if "%1" == "/DEBUG" (set debug=1)
-if "%2" == "/DEBUG" (set debug=1)
-if "%3" == "/DEBUG" (set debug=1)
-if "%4" == "/DEBUG" (set debug=1)
-if "%5" == "/DEBUG" (set debug=1)
-if "%6" == "/DEBUG" (set debug=1)
-if "%7" == "/DEBUG" (set debug=1)
-if "%8" == "/DEBUG" (set debug=1)
-if "%9" == "/DEBUG" (set debug=1)
-
-if "%1" == "/?" (set help=1)
-if "%2" == "/?" (set help=1)
-if "%3" == "/?" (set help=1)
-if "%4" == "/?" (set help=1)
-if "%5" == "/?" (set help=1)
-if "%6" == "/?" (set help=1)
-if "%7" == "/?" (set help=1)
-if "%8" == "/?" (set help=1)
-if "%9" == "/?" (set help=1)
-
-if "%1" == "/langvivn" (goto loadlang_vi)
-if "%2" == "/langvivn" (goto loadlang_vi)
-if "%3" == "/langvivn" (goto loadlang_vi)
-if "%4" == "/langvivn" (goto loadlang_vi)
-if "%5" == "/langvivn" (goto loadlang_vi)
-if "%6" == "/langvivn" (goto loadlang_vi)
-if "%7" == "/langvivn" (goto loadlang_vi)
-if "%8" == "/langvivn" (goto loadlang_vi)
-if "%9" == "/langvivn" (goto loadlang_vi)
-
-if "%1" == "/LANGVIVN" (goto loadlang_vi)
-if "%2" == "/LANGVIVN" (goto loadlang_vi)
-if "%3" == "/LANGVIVN" (goto loadlang_vi)
-if "%4" == "/LANGVIVN" (goto loadlang_vi)
-if "%5" == "/LANGVIVN" (goto loadlang_vi)
-if "%6" == "/LANGVIVN" (goto loadlang_vi)
-if "%7" == "/LANGVIVN" (goto loadlang_vi)
-if "%8" == "/LANGVIVN" (goto loadlang_vi)
-if "%9" == "/LANGVIVN" (goto loadlang_vi)
-
-if "%1" == "/langdede" (goto loadlang_de)
-if "%2" == "/langdede" (goto loadlang_de)
-if "%3" == "/langdede" (goto loadlang_de)
-if "%4" == "/langdede" (goto loadlang_de)
-if "%5" == "/langdede" (goto loadlang_de)
-if "%6" == "/langdede" (goto loadlang_de)
-if "%7" == "/langdede" (goto loadlang_de)
-if "%8" == "/langdede" (goto loadlang_de)
-if "%9" == "/langdede" (goto loadlang_de)
-
-if "%1" == "/LANGDEDE" (goto loadlang_de)
-if "%2" == "/LANGDEDE" (goto loadlang_de)
-if "%3" == "/LANGDEDE" (goto loadlang_de)
-if "%4" == "/LANGDEDE" (goto loadlang_de)
-if "%5" == "/LANGDEDE" (goto loadlang_de)
-if "%6" == "/LANGDEDE" (goto loadlang_de)
-if "%7" == "/LANGDEDE" (goto loadlang_de)
-if "%8" == "/LANGDEDE" (goto loadlang_de)
-if "%9" == "/LANGDEDE" (goto loadlang_de)
-
-if %lang% == vi-VN (goto loadlang_vi)
-if %lang% == de-DE (goto loadlang_vi)
-if %lang% neq en-US (echo Cannot find a supported language for&echo BCP 47 language code %lang%. Using default language English (US^).&echo.)
+:init_lang
+if "%lang%" == "1066" (goto loadlang_vivn)
+if "%lang%" == "1031" (goto loadlang_dede)
+if "%lang%" neq "1033" (
+echo Cannot find a supported language for Microsoft language code %lang%.
+echo Using default language English (US^).
+echo.
+timeout /t 2 /nobreak >nul
+)
 
 :: load text for selected language
-:loadlang_en
+:loadlang_enus
 set langde=0
 set str_help_00=Debug Mode not supported with the help menu. Exiting
 set str_help_01=Allows you to remove the new Microsoft Edge based on Chromium
@@ -126,7 +53,6 @@ set str_help_11=Runs the script with the language specified in its XXXX paramete
 set str_help_12=e.g. /langvivn runs the script in Vietnamese
 set str_help_13=Note that because this is NOT a built-in Windows program, you cannot use the command
 set str_help_14=to display this help message
-set str_help_15=All rights go to their respective owners
 
 set str_title=GWE's Microsoft Edge and Search Box Suggestions Remover
 
@@ -168,7 +94,7 @@ set str_cautionmsg_7=have web results displayed when using the Search feature
 set str_cautionmsg_8=Typing a website address (e.g. amazon.com) will yield a result
 set str_cautionmsg_9=and will open if Microsoft Edge is installed
 
-set str_edgever=Got Edge version successfully
+set str_edgever=Got Edge version
 set str_edgeverfail=Can't get the Edge version! You probably uninstalled Edge before
 set str_uninsedge_0=First, I need your Microsoft Edge version number
 set str_uninsedge_1=Open Edge, click the three-dots icon, then Settings,
@@ -218,7 +144,7 @@ set str_manage_success=And it's done! Registry tweak succeeded
 
 goto next
 
-:loadlang_vi
+:loadlang_vivn
 set langde=0
 set str_help_00=Chế độ gỡ lỗi không được hỗ trợ với menu trợ giúp. Đang thoát
 set str_help_01=Cho phép bạn xóa Microsoft Edge mới dựa trên Chromium
@@ -234,8 +160,7 @@ set str_help_10=Bật chế độ lặp lệnh và chạy tập lệnh
 set str_help_11=Chạy tập lệnh với ngôn ngữ được chỉ định trong tham số XX của nó
 set str_help_12=ví dụ: /langvivn chạy script bằng tiếng Việt
 set str_help_13=Lưu ý rằng vì đây KHÔNG phải là chương trình Windows được tích hợp sẵn, bạn không thể sử dụng lệnh
-set str_help_14=để hiển thị thông báo trợ giúp này
-set str_help_15=Tất cả các quyền thuộc về chủ sở hữu tương ứng của họ
+set str_help_14=để hiển thị thông báo trợ giúp nàys
 
 set str_title=Phần mềm Gỡ bỏ Microsoft Edge và đề xuất Hộp tìm kiếm của GWE
 
@@ -277,7 +202,7 @@ set str_cautionmsg_7=hiển thị kết quả web khi sử dụng tính năng T�
 set str_cautionmsg_8=TNhập địa chỉ trang web (ví dụ: amazon.com) sẽ mang lại kết quả
 set str_cautionmsg_9=và sẽ mở nếu Microsoft Edge được cài đặt
 
-set str_edgever=Đã có phiên bản Edge thành công
+set str_edgever=Đã có phiên bản Edge
 set str_edgeverfail=Không thể lấy phiên bản Edge! Bạn có thể đã gỡ cài đặt Edge trước đây
 set str_uninsedge_0=Trước tiên, tôi cần số phiên bản Microsoft Edge của bạn
 set str_uninsedge_1=Mở Edge, nhấp vào biểu tượng ba chấm, sau đó nhấp vào Cài đặt,
@@ -327,7 +252,7 @@ set str_manage_success=Và nó đã hoàn thành! Chỉnh sửa sổ đăng ký 
 
 goto next
 
-:loadlang_de
+:loadlang_dede
 set langde=1
 set str_help_00=Debug-Modus wird vom Hilfemenü nicht unterstützt. Beenden
 set str_help_01=Ermöglicht Ihnen das Entfernen des neuen Microsoft Edge basierend auf Chromium
@@ -344,7 +269,6 @@ set str_help_11=Führt das Skript mit der im Parameter XXXX angegebenen Sprache 
 set str_help_12=z.B. /langvivn führt das Skript auf Vietnamesisch aus
 set str_help_13=Beachten Sie, dass Sie den Befehl "help msedgeremover" icht verwenden können,
 set str_help_14=um diese Hilfemeldung anzuzeigen, nda es sich NICHT um ein
-set str_help_15=Alle Rechte liegen bei ihren jeweiligen Eigentümern
 
 set str_title=Microsoft Edge und Suchfeld-Vorschläge-Entferner von GWE
 
@@ -386,7 +310,7 @@ set str_cautionmsg_7=der Suchfunktion keine Webergebnisse angezeigt werden
 set str_cautionmsg_8=Die Eingabe einer Website-Adresse (z.B. amazon.com) führt zu einem Ergebnis
 set str_cautionmsg_9=und wird geöffnet, wenn Microsoft Edge installiert ist
 
-set str_edgever=Edge-Version erfolgreich erhalten
+set str_edgever=Erhaltene Edge-Version
 set str_edgeverfail=Edge-Version kann nicht abgerufen werden! Sie haben Edge wahrscheinlich schon einmal deinstalliert
 set str_uninsedge_0=Zuerst benötige ich Ihre Microsoft Edge-Versionsnummer
 set str_uninsedge_1=Öffnen Sie Edge, klicken Sie auf das Drei-Punkte-Symbol, dann auf Einstellungen
@@ -434,6 +358,9 @@ set str_manage_disable=Hey! Es ist bereits deaktiviert, Mann
 set str_manage_enable=Hey! Es ist bereits aktiviert, Mann
 set str_manage_success=Und fertig! Registrierungsoptimierung erfolgreich
 
+goto next
+
+:: more languages in the future so "goto next" is added
 
 :next
 if %help% == 1 (
@@ -448,18 +375,18 @@ echo.
 echo msedgeremover [/?] [/debug] [/echoon] [/langXXXX]
 echo.
 echo %str_help_06%:
-echo:/?       %str_help_07%.
+echo:/?,        %str_help_07%.
 echo.
 echo %str_help_08%:
 echo /debug     %str_help_09%.
-echo /ECHOON    %str_help_10%.
+echo /echoon    %str_help_10%.
 echo /langXXXX  %str_help_11%.
 echo            (%str_help_12%^)
 echo.
 echo %str_help_13%
 if %langde% == 1 (echo %str_help_14%.) else (echo "help msedgeremover" %str_help_14%.)
 echo.
-echo (c^) 2021 GamingWithEvets Inc. %str_help_15%.
+echo (c^) 2021-2022 GamingWithEvets Inc.
 exit /b
 )
 
@@ -498,11 +425,18 @@ CD /D "%~dp0"
 title %str_title% - v%version%
 set retreatdir=%~dp0
 
+goto menu
+
+:premenu
+cd /d %retreatdir%
+echo %str_menu_5%.
+pause >nul
+
 :menu
 :: clear screen and print menu screen
 cls
 echo %str_title% - v%version%
-if %debug% == 1 (echo :p   %retreatdir%   %*   %~s0) else (echo.)
+echo.
 echo %str_menu_0%
 echo %str_menu_1%
 echo %str_menu_2%
@@ -548,18 +482,19 @@ echo %str_uninsedge_1%
 echo %str_uninsedge_2%
 echo %str_uninsedge_3%.
 set /p edgever=%str_uninsedge_4%): 
-if "%edgever%" neq "" (cls & goto msedgebegone_2)
+if "%edgever%" neq "" (
+cls
+echo %str_edgever%: %edgever%
+goto msedgebegone_2
+)
 
 :getversion
 for /f "tokens=2 delims==" %%a in ('wmic datafile where "name='C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe'" get version /value') do set edgever=%%a
-if "%edgever%" neq "" (cls & echo %str_edgever%.) else (
 cls
+if "%edgever%" == "" (
 echo %str_edgeverfail%.
-echo %str_menu_5%.
-pause >nul
-cd /d %retreatdir%
-goto menu
-)
+goto premenu
+) else (echo %str_edgever%: %edgever%)
 
 :msedgebegone_2
 :: attempt to change directory to installer folder of current edge version
@@ -572,10 +507,7 @@ if %errorlevel% == 1 (
 echo %str_uninsedge_6% C:\Program Files (x86^)\Microsoft\Edge\Application\%edgever%\Installer%str_uninsedge_61%!
 echo %str_uninsedge_7%
 echo %str_uninsedge_8%!
-echo %str_menu_5%.
-pause >nul
-cd /d %retreatdir%
-goto menu
+goto premenu
 ) else (echo %str_uninsedge_9% C:\Program Files (x86^)\Microsoft\Edge\Application\%edgever%\Installer%str_uninsedge_91%)
 echo.
 :: check for setup.exe in current directory (used to uninstall edge)
@@ -584,17 +516,14 @@ echo %str_uninsedge10%...
 if not exist setup.exe (
 echo %str_uninsedge11% C:\Program Files (x86^)\Microsoft\Edge\Application\%edgever%\Installer%str_uninsedge12%
 echo %str_uninsedge13%...
-echo %str_menu_5%.
-pause >nul
-cd /d %retreatdir%
-goto menu
+goto premenu
 )
 echo %str_uninsedge14%!
 echo.
 :: attempt to use setup.exe to uninstall edge
 echo %str_uninsedge15%...
 echo %str_uninsedge16%.
-setup --uninstall --system-level --verbose-logging --force-uninstall
+setup --uninstall --system-level --force-uninstall
 echo.
 :: after setup.exe exited, check for msedge executable
 echo setup.exe %str_uninsedge17%...
@@ -602,15 +531,11 @@ echo setup.exe %str_uninsedge17%...
 if exist "%programfiles(x86)%\Microsoft\Edge\Application\msedge.exe" (
 echo %str_uninsedge18%...
 echo %str_uninsedge19%!
-echo %str_menu_5%.
-pause >nul
-cd /d %retreatdir%
-goto menu
+goto premenu
 )
 :: if msedge check succeeds, change to home directory, print success message and ask user
 :: if they want to disable edge reinstalling
 :: if they said yes, go to manage edge reinstall menu, or else return to menu
-cd /d %retreatdir%
 echo.
 echo %str_uninsedge20%
 echo %str_uninsedge21%.
